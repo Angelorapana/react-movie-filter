@@ -34,6 +34,12 @@ function App() {
         <option value="Romantico">Romantico</option>
         <option value="Azione">Azione</option>
       </select>
+
+      <ul>
+        {filmVisibile.map((movie, index) => (
+          <li key={index}>{movie.title}</li>
+        ))}
+      </ul>
     </div>
   )
 }
