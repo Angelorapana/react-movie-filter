@@ -22,11 +22,19 @@ function App() {
       const filtered = film.filter((elemento) => elemento.genre === selectGenere)
       setFilmVisibile(filtered)
     }
-    [selectGenere]
-  })
+  }, [selectGenere])
 
   return (
-    <h1>ciaooo</h1>
+    <div className="container">
+
+      <select onChange={(e) => setSelectGenere(e.target.value)}>
+        <option value="">Tutti i film</option>
+        <option value="Fantascienza">Fantascienza</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Romantico">Romantico</option>
+        <option value="Azione">Azione</option>
+      </select>
+    </div>
   )
 }
 
